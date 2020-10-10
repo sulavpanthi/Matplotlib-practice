@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
 plt.style.use('fivethirtyeight')
@@ -21,6 +22,10 @@ plt.legend()
 plt.title('Ages of Respondents')
 plt.xlabel('Ages')
 plt.ylabel('Total Respondents')
+
+# adding extra xtick at the median age
+plt.xticks(list(plt.xticks()[0]) + [29])
+plt.tick_params(labelsize=10)
 
 plt.tight_layout()
 
